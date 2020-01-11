@@ -1,0 +1,63 @@
+
+If you copy and paste this giant link, all of the exercises will automatically be populated in your play environment!
+
+https://play.kotlinlang.org/#eyJ2ZXJzaW9uIjoiMS4zLjYxIiwicGxhdGZvcm0iOiJqYXZhIiwiYXJncyI6IiIsImpzQ29kZSI6IiIsIm5vbmVNYXJrZXJzIjp0cnVlLCJ0aGVtZSI6ImlkZWEiLCJjb2RlIjoiLyoqXG4gKiBZb3UgY2FuIGVkaXQsIHJ1biwgYW5kIHNoYXJlIHRoaXMgY29kZS4gXG4gKiBwbGF5LmtvdGxpbmxhbmcub3JnIFxuICovXG5cbmltcG9ydCBqYXZhLnRpbWUuTG9jYWxEYXRlXG5cbmZ1biBtYWluKCkge1xuICAgIC8vcGFydCAxLCB0aGUgYmFzaWNzXG4gICBcbiAgICAvLzEuIGxldCdzIGNyZWF0ZSBhIHNpbXBsZSBib29sZWFuIHZhcmlhYmxlXG4gICAgLy9uYW1lZCBcImlzSXRSYWluaW5nXCIsIHNldCBpdCB0byBcInRydWVcIlxuICAgIC8vYW5kIHRoZW4gcHJpbnQgaXQgb3V0XG4gICAgXG4gICAgdmFsIGlzSXRSYWluaW5nID0gdHJ1ZVxuICAgIFxuICAgIHByaW50bG4oaXNJdFJhaW5pbmcpXG4gICAgXG4gICAgLy8yLiBsZXQncyBjcmVhdGUgYW5vdGhlciBib29sZWFuIHZhcmlhYmxlLFxuICAgIC8vbmFtZWQgaXNUb2RheUNocmlzdG1hc1xuICAgIC8vYnV0IHRoaXMgdGltZSB3ZSB3YW50IGl0IHRvIGJlIGZhbHNlXG4gICAgLy9wcmludCBpdCBvdXQgd2hlbiB5b3UgYXJlIGRvbmVcbiAgICBcbiAgICB2YWwgaXNJdENocmlzdG1hcyA9IGZhbHNlXG4gICAgXG4gICAgcHJpbnRsbihpc0l0Q2hyaXN0bWFzKVxuICAgIFxuICAgIC8vcGFydCAyLCB3aGF0IHRoZSBwcmV2aW91cyBwcm9ncmFtbWVyIGxlZnRcbiAgICAvL3dlIHdpbGwgYmUgZWRpdGluZyB0aGlzIHNhbWUgY29kZSBibG9ja1xuICAgIC8vdGhlIGVudGlyZSB0aW1lXG4gICAgXG4gICAgdmFsIGlzQ3VzdG9tZXJIb21lID0gZmFsc2VcbiAgICBcbiAgICB2YWwgaGFzQ3VzdG9tZXJMZWZ0SW5zdHJ1Y3Rpb25zID0gZmFsc2VcbiAgICBcbiAgICBpZiAoaXNDdXN0b21lckhvbWUpIHtcbiAgICAgICAgcHJpbnRsbihcIkRlbGl2ZXIgcGFja2FnZVwiKVxuICAgIH0gZWxzZSBpZiAoaGFzQ3VzdG9tZXJMZWZ0SW5zdHJ1Y3Rpb25zKSB7XG4gICAgICAgIHByaW50bG4oXCJGb2xsb3cgaW5zdHJ1Y3Rpb25zXCIpXG4gICAgfSBlbHNlIHtcbiAgICAgICAgcHJpbnRsbihcIkJhY2sgdG8gd2FyZWhvdXNlXCIpXG4gICAgfVxuICAgIFxuICAgIC8vMS4gY2hhbmdlIHRoZSB2YWx1ZSB0byBmYWxzZSBhbmQgcmUtcnVuXG4gICAgLy90aGUgcHJvZ3JhbVxuICAgIFxuICAgIC8vMi4gY3JlYXRlIGEgbmV3IHZhcmlhYmxlLCByaWdodCBiZWxvdyBcbiAgICAvL1wiaXNDdXN0b21lckhvbWVcIiwgbmFtZWQgXCJoYXNDdXN0b21lckxlZnRJbnN0cnVjdGlvbnNcIlxuICAgIC8vYS4gc2V0IHRoaXMgbmV3IHZhcmlhYmxlIHRvIHRydWVcbiAgICAvL2IuIGFkZCB0aGlzIHZhcmlhYmxlIHRvIG91ciBcImRlY2lzaW9uIHRyZWVcIlxuICAgIC8vYy4gdGVsbCB0aGUgcHJvZ3JhbSB0byBwcmludCBcIkZvbGxvdyBpbnN0cnVjdGlvbnNcIlxuICAgIC8vZC4gd2hlbiB0aGUgcHJvZ3JhbSBlbnRlcnMgdGhpcyBicmFuY2hcbiAgICBcbiAgICAvLzMuIHNldCBib3RoIHZhcmlhYmxlcyB0byBmYWxzZSBhbmQgdGhlbiByZS1ydW5cbiAgICBcbiAgICAvLzQuIGFkZCBhbiBlbHNlIGNhc2Ugd2hlcmUgdGhlIGJyYW5jaCBwcmludHMgb3V0XG4gICAgLy8gXCJCYWNrIHRvIHdhcmVob3VzZVwiXG4gICBcbiAgICAvLzUuIENoYW5nZSB0aGUgdmFyaWFibGVzIGZyb20gdHJ1ZSB0byBmYWxzZSBhbmQgdmljZS12ZXJzYVxuICAgIC8vZXhwZXJpbWVudCB0byBzZWUgd2hlcmUgdGhlIHByb2dyYW0gZ29lc1xuICAgIFxuICAgIC8vY29uZ3JhdHMhISFcbn0ifQ==
+
+If you don't copy and paste it, here are the exercises:
+
+fun main() {
+    //part 1, the basics
+   
+    //1. let's create a simple boolean variable
+    //named "isItRaining", set it to "true"
+    //and then print it out
+    
+    val isItRaining = true
+    
+    println(isItRaining)
+    
+    //2. let's create another boolean variable,
+    //named isTodayChristmas
+    //but this time we want it to be false
+    //print it out when you are done
+    
+    val isItChristmas = false
+    
+    println(isItChristmas)
+    
+    //part 2, what the previous programmer left
+    //we will be editing this same code block
+    //the entire time
+    
+    val isCustomerHome = false
+    
+    val hasCustomerLeftInstructions = false
+    
+    if (isCustomerHome) {
+        println("Deliver package")
+    } else if (hasCustomerLeftInstructions) {
+        println("Follow instructions")
+    } else {
+        println("Back to warehouse")
+    }
+    
+    //1. change the value to false and re-run
+    //the program
+    
+    //2. create a new variable, right below 
+    //"isCustomerHome", named "hasCustomerLeftInstructions"
+    //a. set this new variable to true
+    //b. add this variable to our "decision tree"
+    //c. tell the program to print "Follow instructions"
+    //d. when the program enters this branch
+    
+    //3. set both variables to false and then re-run
+    
+    //4. add an else case where the branch prints out
+    // "Back to warehouse"
+   
+    //5. Change the variables from true to false and vice-versa
+    //experiment to see where the program goes
+    
+    //congrats!!!
+}
