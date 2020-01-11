@@ -1,10 +1,11 @@
 If you copy and paste this giant link, all of the exercises will automatically be populated in your play environment!
 
-(This was previously a very long link in the video, but I shortened it with tinyurl.com. Please use this one!)
+This was previously a very long link in the video, but I shortened it with tinyurl.com. Please use this one!
 
 https://tinyurl.com/rjcgp65
 
-If you don't copy and paste it, here are the exercises:
+If you don't click on that url, you can also copy and paste this block of code
+(everything below this) into https://play.kotlinlang.org.
 
 fun main() {
     //part 1, the basics
