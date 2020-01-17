@@ -1,0 +1,80 @@
+If you copy and paste this giant link, all of the exercises will automatically be populated in your play environment!
+
+Click on the link below to get started
+
+https://tinyurl.com/w9ssqwj
+
+If you don't click on that url, because you're a caveman (or
+cavewoman), you can also copy and paste everything below
+into https://play.kotlinlang.org.
+
+fun main() {
+    //example sentence 1
+    val example1 = "I went to the coffee shop the other day and met up with Waldo"
+    val waldoWasFoundInExample1 = isWaldoHere(example1)
+    prettyPrintSentence(example1, waldoWasFoundInExample1)
+
+    //example sentence 2
+    val example2 = "Mary had a little lamb"
+    val waldoWasFoundInExample2 = isWaldoHere(example2)
+    prettyPrintSentence(example2, waldoWasFoundInExample2)
+
+    //example sentence 3
+    val example3 = "Samantha built a robot named WaLdO"
+    val waldoWasFoundInExample3 = isWaldoHere(example3)
+    prettyPrintSentence(example3, waldoWasFoundInExample3)
+
+    //initial investment 1
+    val investment1 = 5
+    val investment1AfterOneYear = calculateMyProfitAfterOneYear(investment1)
+    prettyPrintMoney(investment1, investment1AfterOneYear)
+
+    //initial investment 2
+    val investment2 = 500
+    val investment2AfterOneYear = calculateMyProfitAfterOneYear(investment2)
+    prettyPrintMoney(investment1, investment2AfterOneYear)
+
+    //initial investment 3
+    val investment3 = 0
+    val investment3AfterOneYear = calculateMyProfitAfterOneYear(investment3)
+    prettyPrintMoney(investment1, investment3AfterOneYear)
+}
+
+fun prettyPrintSentence(sentence: String, waldoWasFound: Boolean): Unit {
+    println("Sentence: \"${sentence}\" was ${waldoWasFound}")
+}
+
+fun prettyPrintMoney(initialInvestment: Int, moneyAfterOneYear: Int): Unit {
+    println("Your initial investment of ${initialInvestment} is now ${moneyAfterOneYear}")
+}
+
+/**
+ * Exercise 1
+ * Write a function named isWaldoHere
+ * This function should take a String as a parameter
+ * Name that parameter "sentence"
+ * The return type of this function should be a Boolean
+ * In the body of the function, we want to check if
+ * the sentence contains "waldo".
+ * "WALDO", "WaLdO", "waldo" should all return true
+ * Any sentence without "waldo" should return false
+ * HINT: use .toLowerCase
+ */
+fun isWaldoHere(sentence: String): Boolean {
+    return false
+}
+
+/**
+ * Exercise 2
+ * Write a function named calculateMyProfit
+ * This function should take an Int as a parameter
+ * Name that parameter "initialInvestment"
+ * The return type of this function should be an Int
+ * In the body of the function, we want to:
+ * Multiply a number by itself, and then add the
+ * result of squaring the original number/parameter
+ */
+fun calculateMyProfitAfterOneYear(initialInvestment: Int): Int {
+    return 0
+}
+
