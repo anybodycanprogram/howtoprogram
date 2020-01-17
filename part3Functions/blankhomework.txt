@@ -1,0 +1,72 @@
+Click on the link below to get started
+
+http://bit.ly/2FXcxj1
+
+If you don't click on that url, because you're a caveman (or
+cavewoman), you can also copy and paste everything below
+into https://play.kotlinlang.org.
+
+//HOMEWORK FOR PART 3, FUNCTIONS
+
+fun main() {
+    canIRetire(1_000_000)
+    canIRetire(500_000)
+    canIRetire(0)
+
+    println(playMatchmaker("John", "Leah", "Davis"))
+    println(playMatchmaker("Abraham", "Mary", "Lincoln"))
+    //I don't actually know if this is true, if not, blame the Internet)
+    println(playMatchmaker("Beyonce", "Shawn", "Knowles-Carter"))
+}
+
+//for exercise2
+//this shows
+fun exampleFunction1(param1: String, param2: String): String {
+    return param1 + " you can add text here " + param2 + "or here"
+}
+
+//for exercise2, alternative way of doing the same thing
+//above in exampleFunction1
+fun exampleFunction2(param1: String, param2: String): String {
+    return "${param1} you can add text here ${param2} or here"
+}
+
+/**
+ * Exercise 1
+ * Write a function named canIRetire
+ * This function should take an Int as a parameter
+ * Name that parameter "myMoney"
+ * If the value is above 1_000_000 (one million)
+ * then print out "yes"
+ * If the value is above 500_000 (five hundred thousand)
+ * print out "maybe"
+ * else print out "nope"
+ * NOTE: NOTICE THERE IS NO RETURN TYPE HERE
+ * THIS IS BECAUSE WE DON'T NEED ONE. WE JUST WANT TO
+ * PRINT SOMETHING, NOT RETURN SOMETHING
+ */
+fun canIRetire(myMoney: Int) {
+    println("nope")
+}
+
+/**
+ * Exercise 2
+ * Write a function named playMatchmaker
+ * This function should take THREE parameters
+ * all will be of type String
+ * name the first one person1 and the second
+ * person2. The last parameter should be
+ * named newLastName
+ * The return type of this function should
+ * be a String. In the body of the function, we want to:
+ * return "person1 will marry person2 and their
+ * new last name will be newLastName"
+ * If you're confused as so how you might go about this
+ * then check out "exampleFunction1" at the very top
+ * or "exampleFunction2". They do the same thing in different
+ * ways. You'll see what I mean. Happy Coding.
+ */
+fun playMatchmaker(person1: String, person2: String, newLastName: String): String {
+    return ""
+}
+
