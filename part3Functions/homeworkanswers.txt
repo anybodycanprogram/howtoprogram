@@ -1,6 +1,6 @@
 Click on the link below for the answers
 
-http://bit.ly/2R7sxp5
+http://bit.ly/3apfSW6
 
 If you don't click on that url, because you're a caveman (or
 cavewoman), you can also copy and paste everything below
@@ -9,8 +9,40 @@ into https://play.kotlinlang.org.
 //HOMEWORK FOR PART 3, FUNCTIONS
 
 fun main() {
+    //I have added comments
+    //and extra function calls
+    //to this worksheet.
+    //the solution remains unchanged
+    //I just wanted to make sure
+    //it was crystal clear what
+    //we did in the homework
+    
+    //greater than 5_000_000, so 
+    //this prints out "yes"
     canIRetire(1_000_001)
+    
+    //greater than 1_000_000, so 
+    //this prints out "yes"
+    canIRetire(1_000_001)
+    
+    //not greater than 1_000_000, so maybe 
+    //(because it's also greater than 500_000!)
+    //so this prints out "maybe"
+    canIRetire(1_000_000)
+    
+    //greater than 1_000_000? nope
+    //but greater than 500_000? yes
+    //so this prints out "maybe"
     canIRetire(500_001)
+    
+    //greater than 1_000_000? nope
+    //but greater than 500_000? nope
+    //so this prints out "nope"
+    canIRetire(500_000)
+    
+    //greater than 1_000_000? nope
+    //but greater than 500_000? nope
+    //so this prints out "nope"
     canIRetire(0)
 
     println(playMatchmaker("John", "Leah", "Davis"))
