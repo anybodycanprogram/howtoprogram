@@ -1,0 +1,132 @@
+Click on the link below for the answers
+
+http://bit.ly/37tnIwh
+
+If you don't click on that url, because you're a caveman (or
+cavewoman), you can also copy and paste everything below
+into https://play.kotlinlang.org.
+
+fun main() {
+    println("exercise 1\n")
+
+    val characters = listOf("Mario",
+            "Superman",
+            "Spiderman",
+            "Batman",
+            "Catwoman",
+            "Steve",
+            "Ironman")
+
+    val superheroesWithMan = findSuperheroesContainingMan(characters)
+    println(superheroesWithMan)
+    println(superheroesWithMan.size)
+
+    println("\nexercise 2\n")
+
+    val missions = listOf(
+            "Apollo 8  - Launched 21 December 1968",
+            "Apollo 10 - Launched 18 May 1969",
+            "Apollo 11 - Launched 16 July 1969",
+            "Apollo 12 - Launched 14 November 1969",
+            "Apollo 13 - Launched 11 April 1970",
+            "Apollo 14 - Launched 31 January 1971",
+            "Apollo 15 - Launched 26 July 1971",
+            "Apollo 16 - Launched 16 April 1972",
+            "Apollo 17 - Launched 07 December 1972"
+    )
+
+    val missionYears = extractYearFromMission(missions)
+    println(missionYears)
+    println(missionYears.distinct())
+
+    println("\nexercise 3\n")
+
+    //ATTENTION! We are introducing something new
+    //it's called the Pair! A pair can hold two things
+    //of any two types! So:
+    // String + String
+    // Date + Int
+    // Int + LocalDate
+    // String + Boolean
+    //this is very convenient and allows us to save
+    //more info with less work
+    val grades = listOf(
+            Pair("Math", 84),
+            Pair("Physics", 78),
+            Pair("Dance", 90),
+            Pair("Theatre", 91),
+            Pair("History", 99)
+    )
+
+    prettyPrintGrades(grades)
+
+    //BONUS! Find the top grade
+
+    val topGrade = grades.sortedByDescending { it.second }.first()
+
+    println("Top grade was ${topGrade.second}/100 in ${topGrade.first}")
+}
+
+/*
+* exercise 1 (FILTER)
+* We want to create a new superhero
+* and we are trying to convince the board
+* that putting "man" in the name
+* is way too common.
+* create a function that
+* returns a list of all
+* characters whose name
+* contains the word "man"
+* Return type should be a list of Strings
+* Input will be a list of Strings
+ */
+fun findSuperheroesContainingMan(characters: List<String>): List<String> {
+    return characters.filter { it ->
+        it.contains("man")
+    }
+}
+
+/*
+* exercise 2 (MAP)
+* The Apollo Space Program's
+* goal was to land people on the moon
+* and return them safely home. The lunar
+* missions spanned from 1968 to 1972.
+* Given a list of Strings with the mission
+* title and the year, return a list of
+* the year in which the mission occurred.
+* Duplicates are allowed.
+* Return type should be a list of Int
+* Input will be a list of Strings
+ */
+fun extractYearFromMission(missions: List<String>): List<Int> {
+    return missions.map { it ->
+        it.split(" ")
+    }.map { it ->
+        it.last()
+    }.map { it ->
+        it.toInt()
+    }
+}
+
+/*
+* exercise 3 (FOR EACH / FOR LOOP)
+* You just finished a very tough semester
+* at school. You got your grades back
+* and you're pretty happy! You'd like
+* to create a function that prints out
+* "In ${nameOfClass} I got ${gradeInClass}"
+* to show your parents how your hard work
+* has paid off.
+* Return type should be nothing, just print
+* Input will be a list of Pairs. Each pair
+* holds a String (name of class) and an Int
+* (grade in that class)
+ */
+fun prettyPrintGrades(grades: List<Pair<String, Int>>) {
+    grades.forEach { it ->
+        val nameOfClass = it.first
+        val gradeInClass = it.second
+        println("In ${nameOfClass} I got ${gradeInClass}")
+    }
+}

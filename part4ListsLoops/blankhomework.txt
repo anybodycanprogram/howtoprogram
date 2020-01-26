@@ -1,0 +1,131 @@
+Click on the link below to get started
+
+http://bit.ly/2NYxFKe
+
+If you don't click on that url, because you're a caveman (or
+cavewoman), you can also copy and paste everything below
+into https://play.kotlinlang.org.
+
+fun main() {
+    //HOMEWORK FOR PART 4
+    //"LISTS AND FOR LOOPS"
+
+    println("homework exercise #1\n")
+
+    val bobsIncomeSources = listOf(
+            Pair("Apple Stock", 5290),
+            Pair("Gold", 200),
+            Pair("Silver", 501),
+            Pair("Ethereum", 1000),
+            Pair("eBay Stock", 789),
+            Pair("Vintage Lego Sets", 9000)
+    )
+
+    println(findTopPerformingSourcesOfIncome(bobsIncomeSources))
+
+    println("\nhomework exercise #2\n")
+
+    val einsteinProblems = listOf(
+            "What would happen if two Earths collided into each other?",
+            "Why is the Earth round?",
+            "If one Earth gets eaten and nobody saw it, did it really happen?",
+            "What will you do for the world on Earth Day?",
+            "If Earth is so great, why are we still trying to get to Mars?",
+            "I need someone to shovel my driveway this weekend",
+            "How long does it take to orbit the Earth?",
+            "Should I get a haircut?",
+            "Why does everyone on Earth make such a fuss about the number 42?"
+    )
+
+    val donutProblems = replaceEarthsWithDonuts(einsteinProblems)
+    donutProblems.forEach {
+        println(it)
+    }
+
+    println("\nhomework exercise #3\n")
+
+    //marathon race time is in minutes
+    val racersAndTimes = listOf(
+            Pair("Judy", 199),
+            Pair("Bob", 200),
+            Pair("Sally", 145),
+            Pair("Sean", 140),
+            Pair("Marvin", 500)
+    )
+
+    prettyPrintRaceTimes(racersAndTimes)
+
+    //BONUS! Find the top race time!
+    //write your solution to the bonus
+    //question here.
+}
+
+/*
+* exercise 1 (FILTER)
+* Uncle Bob is up to his
+* crazy antics again. This
+* time he wants you to develop
+* a function that will tell him
+* which of his investments made
+* the most money last year.
+* Anything above $500 is considered
+* a candidate (think filter!).
+* He only wants the top 3 though!
+* HINT: use .take(3) on a list to grab
+* three items from a list. You're
+* going to need to first .filter
+* using the criteria provided, and then
+* .sortByDescending and then
+* use .take(3). Chain your methods.
+*
+* Return type should be a list of type Pair<String, Int>
+* Input will be a list of of type Pair<String, Int>
+ */
+fun findTopPerformingSourcesOfIncome(bobsIncomeSources: List<Pair<String, Int>>): List<Pair<String, Int>> {
+    return listOf()
+}
+
+/*
+* exercise 2 (MAP)
+* Einstein is a physics professor
+* but always seem to have issues
+* programming. He needs you, his lab
+* assistant, because he wants to
+* make his problem sets funnier.
+* For every problem in his list,
+* he wants you to to replace
+* the word "Earth" with "Donut"
+* For example, "How long does it
+* take to orbit the Earth"
+* should be replaced with
+* "How long does it take to Orbit
+* the Donut". Since you are a good
+* lab assistant, you don't tell
+* Einstein that this is a bad idea.
+* Plus, you really need the money.
+*
+* Return type should be a list of Strings
+* Input will be a list of Strings
+ */
+fun replaceEarthsWithDonuts(einsteinProblems: List<String>): List<String> {
+    return listOf()
+}
+
+/*
+* exercise 3 (FOR EACH / FOR LOOP)
+* You just completed your first marathon!
+* Congratulations! You and your friends all finished
+* and since you're all learning to program together,
+* you wanted to come up with a cool way to share your times.
+* So you decided to create a function that prints the name of
+* each racer and their time. Use this format:
+* "${nameOfRacer} finished in ${finishingTime}"
+*
+* Return type should be nothing
+* Input will be a list of pairs type Pair<String, Int>
+* BONUS: Try to figure out if you want print out the
+* time in hours, not minutes.
+ */
+fun prettyPrintRaceTimes(racersAndTimes: List<Pair<String, Int>>) {
+    println()
+}
