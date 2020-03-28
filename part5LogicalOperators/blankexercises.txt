@@ -25,7 +25,7 @@ fun main() {
     println(calculateShakePrice(listOf("MANGO", "", "PEANUT BUTTER", "JELLY")))
 
     //Part 3: NOT Full
-    //John, our most loyal customers, has an addiction to Burger Empire and he
+    //John, our most loyal customer, has an addiction to Burger Empire and he
     //wants to start being more responsible with his food choices. You, as the
     //programmer, should prevent John from making any purchases if he is already full
     //but how do you do this? Well, welcome to the world of programming, where
