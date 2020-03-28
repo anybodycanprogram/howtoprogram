@@ -2,9 +2,13 @@ Click on the link below to get started
 
 http://bit.ly/39DTzv4
 
-If you don't click on that url, because you're a caveman (or
-cavewoman), you can also copy and paste everything below
-into https://play.kotlinlang.org.
+It would be even better if you copied and pasted this code into intellij
+and ran it that way. To see how to install intellij please go here:
+
+https://youtu.be/BzKQneoZB-U
+
+To see how to copy and paste this into a file and run in intellij, simply
+go back to part 5 of learn how to program. 
 
 fun main() {
     //Part 1: Burger AND Fries
