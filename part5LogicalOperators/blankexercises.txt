@@ -20,7 +20,7 @@ fun main() {
     //Part 2: Mango OR Strawberry?
     //Burger Empire is having a hard time getting its customers to buy
     //shakes. As an incentive to buy the more expensive mango or strawberry
-    //shake flavors, Burger Empire offers it's customers a free chocolate
+    //shake flavors, Burger Empire offers its customers a free chocolate
     //chip cookie.
     println(calculateShakePrice(listOf("MANGO", "", "PEANUT BUTTER", "JELLY")))
 
