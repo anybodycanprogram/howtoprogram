@@ -1,40 +1,35 @@
 Click on the link below for the answers
 
-http://bit.ly/2xrESxf
+https://pl.kotl.in/H_yUaV3KE
 
-If you don't click on that url, because you're a caveman (or
-cavewoman), you can also copy and paste everything below
-into https://play.kotlinlang.org.
+You can also copy and paste this into your intelliJ idea.
 
 fun main() {
-    val full = false
+    val isJohnFull = false
 
-    if (!full) {
-
+    if (!isJohnFull) {
         //Part 1: Burger AND Fries
         //Burger Empire always like to start with your burger
         //and fries. Calculate the price of John's current burger
         //and fries order.
-        val priceOfBurgerAndFries = calculateBurgerAndFriesPrice(listOf("BURGER", "FRIES", "KETCHUP", "RACCOON"))
+        val burgerAndFriesOrder = calculateBurgerAndFriesPrice(listOf("FRIES", "BURGER", "BURGER", "RACCOON"))
 
         //Part 2: Mango OR Strawberry?
         //Burger Empire is having a hard time getting its customers to buy
         //shakes. As an incentive to buy the more expensive mango or strawberry
-        //shake flavors, Burger Empire offers it's customers a free chocolate
+        //shake flavors, Burger Empire offers its customers a free chocolate
         //chip cookie.
-        val priceOfShakes = calculateShakePrice(listOf("MANGO", "", "PEANUT BUTTER", "JELLY"))
+        val shakeOrder = calculateShakePrice(listOf("MANGO", "MANGO", "CHOCOLATE", "JELLY"))
 
         //Part 3: NOT Full
-        //John, our most loyal customers, has an addiction to Burger Empire and he
+        //John, our most loyal customer, has an addiction to Burger Empire and he
         //wants to start being more responsible with his food choices. You, as the
         //programmer, should prevent John from making any purchases if he is already full
         //but how do you do this? Well, welcome to the world of programming, where
         //there is typically more than one way to do the exact same thing.
 
         //BONUS: Add up how much John's order cost and print it to the screen!
-        println(priceOfBurgerAndFries + priceOfShakes.first)
-    } else {
-        println("You've had enough, go home!")
+        println(burgerAndFriesOrder + shakeOrder.first)
     }
 }
 
@@ -47,18 +42,15 @@ fun main() {
 * one burger and one fry.
 **/
 fun calculateBurgerAndFriesPrice(orderItems: List<String>): Double {
-    var orderTotal = 0.0
-
+    //if orderItems contains BURGER AND FRIES, then 3.50
     if (orderItems.contains("BURGER") && orderItems.contains("FRIES")) {
-        orderTotal = orderTotal + 3.50
+        return 3.50
     } else if (orderItems.contains("BURGER")) {
-        orderTotal = orderTotal + 3.0
+        return 3.00
     } else if (orderItems.contains("FRIES")) {
-        orderTotal = orderTotal + 2.0
-    } else {
-        orderTotal = 0.0
+        return 2.00
     }
-    return orderTotal
+    return 0.00
 }
 
 /* Mango or strawberry shakes cost 3.25 a piece.
@@ -76,20 +68,18 @@ fun calculateBurgerAndFriesPrice(orderItems: List<String>): Double {
 * or mango shakes. JUST ONE COOKIE PER CUSTOMER!
 **/
 fun calculateShakePrice(orderItems: List<String>): Pair<Double, Boolean> {
-    var getsACookie = false
+    var hasEarnedCookie = false;
 
-    val total = orderItems.map { it ->
-        if (it == "STRAWBERRY" || it == "MANGO") {
-            getsACookie = true
+    val prices = orderItems.map { it ->
+        if (it == "MANGO" || it == "STRAWBERRY") {
+            hasEarnedCookie = true
             3.25
-        } else if (it == "CHOCOLATE") {
-            3.0
-        } else if (it == "VANILLA") {
-            3.0
+        } else if (it == "CHOCOLATE" || it == "VANILLA" ) {
+            3.00
         } else {
-            0.0
+            0.00
         }
     }
 
-    return Pair(total.sum(), getsACookie)
+    return Pair(prices.sum(), hasEarnedCookie)
 }
