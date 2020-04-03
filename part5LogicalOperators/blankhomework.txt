@@ -1,0 +1,105 @@
+If you would like to solve the homework in the broswer, go here:
+
+https://pl.kotl.in/us8i4muNl
+
+Otherwise, copy and paste everything below into IntelliJ.
+To see how to install IntelliJ please go here:
+
+https://youtu.be/BzKQneoZB-U
+
+COPY EVERYTHING BELOW THIS POINT
+
+fun main() {
+    //HOMEWORK FOR PART 5
+
+    //(AND) what should I do today?
+    val conditions1 = listOf("school is out", "not snowing")
+    val conditions2 = listOf("school is out", "")
+    val conditions3 = listOf("", "snowing")
+    val conditions4 = listOf("school is out", "snowing")
+    println(activityPicker(conditions1))
+    println(activityPicker(conditions2))
+    println(activityPicker(conditions3))
+    println(activityPicker(conditions4))
+
+    //(OR) Where should I move to?
+    val language1 = "Russian"
+    val language2 = "Ukrainian"
+    val language3 = "Italian"
+    val language4 = "German"
+    val language5 = "English"
+    println(determineNewCountry(language1))
+    println(determineNewCountry(language2))
+    println(determineNewCountry(language3))
+    println(determineNewCountry(language4))
+    println(determineNewCountry(language5))
+
+    //(NOT) what's a good name for a dog?
+    rateDogName(listOf("Max", "Skip", "Spot", "Kitty"))
+}
+
+/*
+ You are really bored today and you're
+ twelve years old. You want to write a program
+ to tell you what to do with your day:
+
+ If "school is out" AND "snowing" are
+ the current conditions, then return
+ "snowball fight".
+ If just "school is out" then return
+ "play videogames".
+ If it is just "snowing", then return
+ "look outside the window from your classroom"
+
+ Input will be a List<String> with two conditions,
+ output will be a String with activity. Assume
+ that the two conditions can come in any order,
+ so listOf("snowing", "") will give the same result
+ as listOf("", "snowing"). HINT: use contains.
+ If none of those conditions are found, return
+ "do nothing".
+ */
+fun activityPicker(conditions: List<String>): String {
+    return ""
+}
+
+/*
+ You want to learn a new language but you're unsure
+ where you should move to. Luckily, you're a programmer
+ and you've done some research and you've come up with a
+ good list, but you want others to benefit from it to
+ so you decided to write a program. (BTW, these are just
+ examples, there are plenty of other great places to move
+ to that would enable you to learn these languages):
+
+ If you want to learn Russian or Ukrainian, then return
+ "Odessa, Ukraine".
+
+ If you want to learn Italian or German, then
+ return "Tyrol (Austria/Italy)".
+
+ If you want to learn English, then return
+ "California, USA"
+
+ If you want to learn something different, then return
+ "The Internet"
+
+ Input should be a string (a language). Output should
+ be the location (also a String).
+ */
+fun determineNewCountry(language: String): String {
+    return ""
+}
+
+/*
+ Not all dog names are created equal. Write a function
+ that prints out "$dogName is a great name for a dog!"
+ unless that dog name is equal to "Kitty". In that case,
+ print "$dogName is a bad dog name".
+
+ Input should be a List<String>, containing dog names.
+ Do not return anything, just print stuff.
+ */
+fun rateDogName(dogNames: List<String>) {
+    println("hello")
+}
