@@ -1,0 +1,36 @@
+Below is the kotlin playground link
+
+https://pl.kotl.in/GgmSVFRwi
+
+It would be even better if you copied and pasted this code into intellij
+and ran it that way. To see how to install intellij please go here:
+
+https://youtu.be/BzKQneoZB-U
+
+If you are using IntelliJ, copy everything below this point
+
+/*
+    | ---------------------------------------------------------------------------- |
+    | Title | Author | Genre | Year Published | Rating                             |
+    | "Animal Farm", "George Orwell", "political satire", 1945, 4.5                |
+    | "Grapes of Wrath", "John Steinbeck", "novel", 1939, 4.4                      |
+    | "War and Peace", "Leo Tolstoy", "novel", 1869, 4.1                           |
+    | "The Old Man and the Sea", "Ernest Hemingway", "literary fiction", 1952, 4.9 |
+    | ---------------------------------------------------------------------------- |
+*/
+
+fun main() {
+    //1. Create a (data!) class called Book. It should have the following
+    //   fields: author, genre, yearPublished, rating
+
+    //2. Create several different instances of the book classes and fill it
+    //   with sample data. Use the book info provided above
+
+    //3. Create a method in the book class that displays info about the book
+    //   "$title was written by $author and its genre is $genre. It was published in $yearPublished"
+
+    //4. Create a class called BookSelector.
+
+    //5. Create a method in BookSelector that takes in a list of books and
+    //   returns the book with the highest rating.
+}
