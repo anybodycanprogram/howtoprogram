@@ -1,0 +1,67 @@
+Below is the kotlin playground link
+
+https://pl.kotl.in/9pL3GVtB5
+
+It would be even better if you copied and pasted this code into intellij
+and ran it that way. To see how to install intellij please go here:
+
+https://youtu.be/BzKQneoZB-U
+
+If you are using IntelliJ, copy everything below this point
+
+/*
+    | ---------------------------------------------------------------------------- |
+    | Title | Author | Genre | Year Published | Rating                             |
+    | "Animal Farm", "George Orwell", "political satire", 1945, 4.5                |
+    | "Grapes of Wrath", "John Steinbeck", "novel", 1939, 4.4                      |
+    | "War and Peace", "Leo Tolstoy", "novel", 1869, 4.1                           |
+    | "The Old Man and the Sea", "Ernest Hemingway", "literary fiction", 1952, 4.9 |
+    | ---------------------------------------------------------------------------- |
+*/
+
+fun display() {
+    println("I am not inside the class")
+}
+
+//LOOK AT ALL THE FIELDS!
+data class Book(
+    val title: String,
+    val author: String,
+    val genre: String,
+    val yearPublished: Int,
+    val rating: Double
+) {
+    fun display() {
+        println("$title was written by $author and its genre is $genre. It was published in $yearPublished")
+    }
+}
+
+class BookSelector {
+    //METHOD
+    fun findHighestRatedBook(books: List<Book>): Book {
+        val highestRatedBook = books.maxBy { it ->
+            it.rating
+        }
+
+        if (highestRatedBook == null) {
+            return Book("blank", "blank", "blank", 0, 0.0)
+        } else {
+            return highestRatedBook
+        }
+    }
+}
+
+fun main() {
+    val book1 = Book("Animal Farm", "George Orwell", "political satire", 1945, 4.5)
+    val book2 = Book("Grapes of Wrath", "John Steinbeck", "novel", 1939, 4.4)
+    val book3 = Book("War and Peace", "Leo Tolstoy", "novel", 1869, 4.1)
+    val book4 = Book("The Old Man and the Sea", "Ernest Hemingway", "literary fiction", 1952, 4.9)
+
+    val books = listOf(book1, book2, book3, book4)
+
+    val bookSelector = BookSelector()
+
+    val highestRatedBook = bookSelector.findHighestRatedBook(books)
+
+    highestRatedBook.display()
+}
