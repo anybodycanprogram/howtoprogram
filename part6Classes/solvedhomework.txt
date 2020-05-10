@@ -1,0 +1,113 @@
+Below is the kotlin playground link
+
+https://pl.kotl.in/8u__urHin
+
+It would be even better if you copied and pasted this code into intellij
+and ran it that way. To see how to install intellij please go here:
+
+https://youtu.be/BzKQneoZB-U
+
+If you are using IntelliJ, copy everything below this point
+
+//"Croissant", 1.5, "LIDL
+//"Coffee", 8.50, "LIDL"
+//"Jam", 3.45, "LIDL"
+//"Newspaper", 1.25, "Walmart"
+//"Eggs", 5.25, "Walmart"
+
+data class GroceryStoreItem(val name: String, val price: Double, val store: String) {
+    fun display() {
+        println("${name}'s price is ${price}. It can be found at ${store}.")
+    }
+}
+
+class GroceryStoreAnalyzer() {
+    fun addUpAllPrices(items: List<GroceryStoreItem>): Double {
+        val prices = items.map { it ->
+            it.price
+        }
+
+        val sumOfAllPrices = prices.sum()
+
+        return sumOfAllPrices
+    }
+
+    fun findCheapestItem(items: List<GroceryStoreItem>): GroceryStoreItem {
+        val cheapestItem = items.minBy { it -> it.price }
+
+        if (cheapestItem == null) {
+            return GroceryStoreItem("", 0.0, "")
+        } else {
+            return cheapestItem
+        }
+    }
+}
+
+
+fun main() {
+    // 1. Create a data class called GroceryStoreItem
+    // this class should have three fields:
+    // name (String), price (Double), store (String)
+    // name is the name of the item, for example Croissant
+    // price is the price of the item, for example 1.50
+    // store is where you usually can find the item, for example LIDL
+
+    // 2. Use the data class to instantiate several variables of type GroceryStoreItem
+    // fill it with things you usually shop for. Try to add some items from the same store
+    // and some items from different stores. Here's an example of one item:
+    // GroceryStoreItem("croissant", 1.50, "LIDL").
+    // you can find more ideas above the main method.
+
+    val croissant = GroceryStoreItem("Croissant", 1.50, "LIDL")
+    val coffee = GroceryStoreItem("Coffee", 8.50, "LIDL")
+    val jam = GroceryStoreItem("Jam", 3.45, "LIDL")
+    val newspaper = GroceryStoreItem("Newspaper", 1.25, "Walmart")
+    val eggs = GroceryStoreItem("Eggs", 5.25, "Walmart")
+
+    newspaper.display()
+    eggs.display()
+    coffee.display()
+
+    // 3. Create a display method inside of the data class
+    // this method should print out the following (no return type, just print)
+    // "${name}'s price is ${price}. It can be found at ${store}."
+    // use some of the grocery store items you've created and
+    // display them on the screen.
+
+    // 4. Create a list with all of the grocery store items in it. Save
+    // this list in a variable called "groceryStoreItems".
+
+    val groceryStoreItems = listOf(croissant, coffee, jam, newspaper, eggs)
+
+    groceryStoreItems.forEach {
+        it -> it.display()
+    }
+
+    // 5. Create a class called GroceryStoreAnalyzer
+    // add a method called "addUpAllPrices"
+    // this should take as a parameter a list of grocery store items (List<GroceryStoreItem>)
+    // it should return the total price of all items in your list as a Double.
+    // Don't forget that before using the method, you need to instantiate
+    // the class, just like with the GroceryStoreItem display method. If you're confused,
+    // see the previous video for a refresher. When your method is built and you want to
+    // test it out, give it the "groceryStoreItems" variable from the previous step, step 4.
+
+    //instantiate and store in a variable
+    val groceryStoreAnalyzer = GroceryStoreAnalyzer()
+
+    val totalPrice = groceryStoreAnalyzer.addUpAllPrices(groceryStoreItems)
+
+    println(totalPrice)
+
+    val cheapestItem = groceryStoreAnalyzer.findCheapestItem(listOf())
+
+    cheapestItem.display()
+
+    // 6. Create another method in the GroceryStoreAnalyzer class
+    // this time name it "findCheapestItem"
+    // this should take as a parameter a list of grocery store items (List<GroceryStoreItem>)
+    // it should return the cheapest item on your list, so the return type should be
+    // GroceryStoreItem. Display this in you main function somehow, up to you!
+    // When your method is built and you want to test it out, give it
+    // the "groceryStoreItems" variable from step 4 as a parameter.
+}
