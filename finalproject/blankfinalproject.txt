@@ -1,0 +1,69 @@
+For the final project, it is assumed that you are using IntelliJ.
+
+For a detailed tutorial on how to install IntelliJ, go here:
+
+https://youtu.be/BzKQneoZB-U
+
+After installing please copy everything below this point
+
+/*
+("car", 14876.00, Month.NOVEMBER)
+("radio", 23.1, Month.JANUARY)
+("toilet paper", 11.01, Month.JUNE)
+("bread", 6.67, Month.MARCH)
+("onions", 4.09, Month.AUGUST)
+("movie tickets", 25.32, Month.JULY)
+("soda", 2.34, Month.JANUARY)
+("pork ribs", 32.20, Month.FEBRUARY)
+("plant", 4.54, Month.JANUARY)
+("breath mints", 0.99, Month.JULY)
+("husky", 500.32, Month.APRIL)
+("tv", 1312.99, Month.MARCH)
+("pants", 45.99, Month.JANUARY)
+ */
+
+//don't forget, this is the "main method"!
+fun main() {
+    //1. create the expense data class that has three fields:
+    // name of type String (name of expense)
+    // amount of type Double (name of expense)
+    // month of type Month (java.time.Month), make sure you import it (month of expense)
+
+    //2. Create thirteen instances of the class with the data provided above the main method
+
+    //3. Create a function that finds the most expensive item from a
+    // list of expenses and then and returns it.
+    // Make sure to print out the expense in main method.
+
+    //4. Create a function that sums up all of the expenses
+    // and return the final amount. Don't forget to print the
+    // result in the main method
+
+    //5. Create a class called ExpenseFilter. This should have one method in it.
+    // the methods name should be "filterOutSmallExpenses".
+    // the method should take a list of expenses as a parameter and should return
+    // a list of expenses but filter out anything that's less than 100.00.
+    // make sure to print out the result of calling this method in the main method
+
+    //6. create a class called ExpenseSorter with a method called
+    // "sortByMonth". This method should take in a list of expenses
+    // as a parameter and return a list of expenses ordered by month of purchase
+    // (JANUARY would be at the top, DECEMBER at the bottom). Call this method
+    // and print out the result of calling it in the main method
+
+    //7. Create a method in the Expense data class called "toCSVRow"
+    // this method should take nothing as a parameter but should return a String.
+    // the string should be formatted like this:
+    // "${name},${amount},${month}"
+
+    //8. (You will need help for this, either google
+    // "how to print to a file in Kotlin" or wait for the answer in the video)
+    // Create a class called ExpensePrinter.
+    // this class should have a method called "printToCSVFile". "printToCSVFile"
+    // should take in a list of expenses as a parameter. When you call the method
+    // it should create a file called "expensereport.csv". The expenses should
+    // be ordered by month of purchase (JANUARY would be at the top, DECEMBER at the bottom)
+    // You will need a combination of steps 6 and 7 in oder to get this working properly.
+    // Remember that in programming there are often multiple ways to get to the same
+    // solution! Be creative, fail a lot, learn a lot, and continue to grow!
+}
