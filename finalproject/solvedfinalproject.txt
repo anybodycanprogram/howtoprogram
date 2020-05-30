@@ -1,0 +1,200 @@
+For the final project, it is assumed that you are using IntelliJ.
+
+For a detailed tutorial on how to install IntelliJ, go here:
+
+https://youtu.be/BzKQneoZB-U
+
+After installing please copy everything below this point
+
+import java.io.File
+import java.time.Month
+
+/*
+("car", 14876.00, Month.NOVEMBER)
+("radio", 23.1, Month.JANUARY)
+("toilet paper", 11.01, Month.JUNE)
+("bread", 6.67, Month.MARCH)
+("onions", 4.09, Month.AUGUST)
+("movie tickets", 25.32, Month.JULY)
+("soda", 2.34, Month.JANUARY)
+("pork ribs", 32.20, Month.FEBRUARY)
+("plant", 4.54, Month.JANUARY)
+("breath mints", 0.99, Month.JULY)
+("husky", 500.32, Month.APRIL)
+("tv", 1312.99, Month.MARCH)
+("pants", 45.99, Month.JANUARY)
+ */
+
+//don't forget, this is the "main method"!
+
+data class Expense(val name: String, val amount: Double, val month: Month) {
+    fun toCSVRow(): String {
+        return "${name},${amount},${month}"
+    }
+}
+
+fun main() {
+    //1. create the expense data class that has three fields:
+    // name of type String (name of expense)
+    // amount of type Double (name of expense)
+    // month of type Month (java.time.Month), make sure you import it (month of expense)
+
+    //2. Create fourteen instances of the class with the data provided above the main method
+
+    val expense1 = Expense("car", 14876.00, Month.NOVEMBER)
+    val expense2 = Expense("radio", 23.1, Month.JANUARY)
+    val expense3 = Expense("toilet paper", 11.01, Month.JUNE)
+    val expense4 = Expense("bread", 6.67, Month.MARCH)
+    val expense5 = Expense("onions", 4.09, Month.AUGUST)
+    val expense6 = Expense("movie tickets", 25.32, Month.JULY)
+    val expense7 = Expense("soda", 2.34, Month.JANUARY)
+    val expense8 = Expense("pork ribs", 32.20, Month.FEBRUARY)
+    val expense9 = Expense("plant", 4.54, Month.JANUARY)
+    val expense10 = Expense("breath mints", 0.99, Month.JULY)
+    val expense11 = Expense("husky", 500.32, Month.APRIL)
+    val expense12 = Expense("tv", 1312.99, Month.MARCH)
+    val expense13 = Expense("pants", 45.99, Month.JANUARY)
+
+    println(expense3.amount)
+
+    //3. Create a function that finds the most expensive item from a
+    // list of expenses and then and returns it.
+    // Make sure to print out the expense in main method.
+
+    val expenses = listOf(
+            expense1,
+            expense2,
+            expense3,
+            expense4,
+            expense5,
+            expense6,
+            expense7,
+            expense8,
+            expense9,
+            expense10,
+            expense11,
+            expense12,
+            expense13
+    )
+
+    val mostExpensiveExpense = findMostExpensiveExpense(expenses)
+
+    println(mostExpensiveExpense)
+
+    //4. Create a function that sums up all of the expenses
+    // and returns the final amount. Don't forget to print the
+    // result in the main method
+
+    val totalAmount = sumUpAllExpenses(expenses)
+
+    println(totalAmount)
+
+    //5. Create a class called ExpenseFilter. This should have one method in it.
+    // the methods name should be "filterOutSmallExpenses".
+    // the method should take a list of expenses as a parameter and should return
+    // a list of expenses but filter out anything that's less than 100.00.
+    // make sure to print out the result of calling this method in the main method
+
+    val expenseFilter = ExpenseFilter()
+
+    val bigExpenses = expenseFilter.filterOutSmallExpenses(expenses)
+
+    println(bigExpenses)
+
+
+    //6. create a class called ExpenseSorter with a method called
+    // "sortByMonth". This method should take in a list of expenses
+    // as a parameter and return a list of expenses ordered by month of purchase
+    // (JANUARY would be at the top, DECEMBER at the bottom). Call this method
+    // and print out the result of calling it in the main method
+
+    val expenseSorter = ExpenseSorter()
+
+    val expensesSortedByMonth = expenseSorter.sortByMonth(expenses)
+
+    println(expensesSortedByMonth)
+
+    //7. Create a method in the Expense data class called "toCSVRow"
+    // this method should take nothing as a parameter but should return a String.
+    // the string should be formatted like this:
+    // "${name},${amount},${month}"
+
+    val csvRow = expense1.toCSVRow()
+
+    println(csvRow)
+
+    //8. (You will need help for this, either google
+    // "how to print to a file in Kotlin" or wait for the answer in the video)
+    // Create a class called ExpensePrinter.
+    // this class should have a method called "printToCSVFile". "printToCSVFile"
+    // should take in a list of expenses as a parameter. When you call the method
+    // it should create a file called "expensereport.csv". The expenses should
+    // be ordered by month of purchase (JANUARY would be at the top, DECEMBER at the bottom)
+    // You will need a combination of steps 6 and 7 in oder to get this working properly.
+    // Remember that in programming there are often multiple ways to get to the same
+    // solution! Be creative, fail a lot, learn a lot, and continue to grow!
+
+    val expensePrinter = ExpensePrinter()
+
+    expensePrinter.printToCSVFile(expenses)
+}
+
+fun findMostExpensiveExpense(expenses: List<Expense>): Expense {
+    val mostExpensiveItem = expenses.maxBy { it -> it.amount }
+
+    if (mostExpensiveItem == null) {
+        return Expense("Blank Expense", 0.00, Month.JANUARY)
+    } else {
+        return mostExpensiveItem
+    }
+}
+
+fun sumUpAllExpenses(expenses: List<Expense>): Double {
+    val amountsFromExpenses = expenses.map { it ->
+        it.amount
+    }
+
+    return amountsFromExpenses.sum()
+}
+
+class ExpenseFilter() {
+    fun filterOutSmallExpenses(expenses: List<Expense>): List<Expense> {
+        val expensiveExpenses = expenses.filter { it ->
+            it.amount > 100.00
+        }
+
+        return expensiveExpenses
+    }
+}
+
+class ExpenseSorter() {
+    fun sortByMonth(expenses: List<Expense>): List<Expense> {
+        val sortedExpensesByMonth = expenses.sortedBy { it ->
+            it.month
+        }
+
+        return sortedExpensesByMonth
+    }
+}
+
+class ExpensePrinter() {
+    fun printToCSVFile(expenses: List<Expense>) {
+        val file = File("expensesreport.csv")
+
+        val printWriter = file.printWriter()
+
+        //column headers
+        printWriter.println("name,amount,month")
+
+        val expenseSorter = ExpenseSorter()
+
+        val sortedExpenses = expenseSorter.sortByMonth(expenses)
+
+        //print out each row
+        sortedExpenses.forEach {
+            it -> printWriter.println(it.toCSVRow())
+        }
+
+        printWriter.flush()
+    }
+}
